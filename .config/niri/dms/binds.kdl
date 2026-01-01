@@ -1,0 +1,86 @@
+binds {
+    // Toggle Bar
+    Mod+B hotkey-overlay-title="Toggle Bar" {
+        spawn "dms" "ipc" "call" "bar" "toggle" "name" "Main Bar"
+    }
+    // Application Launchers
+    Mod+Space hotkey-overlay-title="Application Launcher" {
+        spawn "dms" "ipc" "call" "spotlight" "toggle";
+    }
+    Mod+V hotkey-overlay-title="Clipboard Manager" {
+        spawn "dms" "ipc" "call" "clipboard" "toggle";
+    }
+    Mod+Alt+M hotkey-overlay-title="Task Manager" {
+        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
+    }
+    Mod+Comma hotkey-overlay-title="Settings" {
+        spawn "dms" "ipc" "call" "settings" "focusOrToggle";
+    }
+    Mod+N hotkey-overlay-title="Notification Center" {
+        spawn "dms" "ipc" "call" "notifications" "toggle";
+    }
+    Mod+P hotkey-overlay-title="Notepad" {
+        spawn "dms" "ipc" "call" "notepad" "toggle";
+    }
+    /-Mod+Y hotkey-overlay-title="Browse Wallpapers" {
+        spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+    }
+    Mod+Shift+Alt+Slash hotkey-overlay-title="Show all keybindings" {
+        spawn "dms" "ipc" "call" "keybinds" "toggle" "niri";
+    }
+
+    // Security
+    Mod+Alt+L hotkey-overlay-title="Lock Screen" {
+        spawn "dms" "ipc" "call" "lock" "lock";
+    }
+
+    // Power Menu
+    Mod+Alt+Q hotkey-overlay-title="Toggle Power Menu" {
+        spawn "dms" "ipc" "call" "powermenu" "toggle"
+    }
+
+    // Media Controls
+    XF86AudioNext allow-when-locked=true hotkey-overlay-title="Next Song" {
+        spawn "dms" "ipc" "call" "mpris" "next"
+    }
+    XF86AudioPrev allow-when-locked=true hotkey-overlay-title="Previous Song" {
+        spawn "dms" "ipc" "call" "mpris" "previous"
+    }
+    XF86AudioPlay allow-when-locked=true hotkey-overlay-title="Play/Pause Music" {
+        spawn "dms" "ipc" "call" "mpris" "playPause"
+    }
+    /-XF86AudioStop allow-when-locked=true hotkey-overlay-title="Stop Music" {
+        spawn "dms" "ipc" "call" "mpris" "stop"
+    }
+
+    // Audio Controls
+    XF86AudioRaiseVolume allow-when-locked=true hotkey-overlay-title="Volume Up" {
+        spawn "dms" "ipc" "call" "audio" "increment" "3";
+    }
+    XF86AudioLowerVolume allow-when-locked=true hotkey-overlay-title="Volume Down" {
+        spawn "dms" "ipc" "call" "audio" "decrement" "3";
+    }
+    XF86AudioMute allow-when-locked=true hotkey-overlay-title="Mute Audio" {
+        spawn "dms" "ipc" "call" "audio" "mute";
+    }
+
+    // Brightness Controls
+    XF86MonBrightnessUp allow-when-locked=true hotkey-overlay-title="Brightness Up" {
+        spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
+    }
+    XF86MonBrightnessDown allow-when-locked=true hotkey-overlay-title="Brightness Down" {
+        spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
+    }
+
+    // Screenshot controls
+    Print hotkey-overlay-title="Screenshot Area" {
+        spawn "dms" "ipc" "call" "niri" "screenshot"
+    }
+    Ctrl+Print hotkey-overlay-title="Screenshot Screen" {
+        spawn "dms" "ipc" "call" "niri" "screenshotScreen"
+    }
+    Alt+Print hotkey-overlay-title="Screenshot Focused Window" {
+        spawn "dms" "ipc" "call" "niri" "screenshotWindow"
+    }
+
+}
