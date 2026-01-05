@@ -293,8 +293,8 @@ layout {
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 
 hotkey-overlay {
-    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
+    hide-not-bound
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -385,7 +385,7 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false { toggle-overview; }
+    Mod+grave repeat=false { toggle-overview; }
 
     Mod+W repeat=false { close-window; }
 
@@ -543,17 +543,16 @@ binds {
     // Expel the bottom window from the focused column to the right.
     // Mod+Period { expel-window-from-column; }
 
-    Mod+R { switch-preset-column-width; }
-    // Cycling through the presets in reverse order is also possible.
-    // Mod+R { switch-preset-column-width-back; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
-    Mod+Shift+M { maximize-column; }
-    Mod+F { fullscreen-window; }
-
+    Mod+E { switch-preset-column-width; }
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Mod+M { expand-column-to-available-width; }
+    Mod+Shift+E { expand-column-to-available-width; }
+    Mod+D { switch-preset-window-height; }
+    Mod+F { reset-window-height; }
+    Mod+M { maximize-window-to-edges; }
+    Mod+Shift+M { fullscreen-window; }
+
+    Mod+R { maximize-column; }
 
     // Center all fully visible columns on screen.
     Mod+C { center-visible-columns; }
@@ -615,6 +614,10 @@ binds {
 
 recent-windows {
     off
+}
+
+config-notification {
+    disable-failed
 }
 
 environment {
