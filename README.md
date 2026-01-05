@@ -12,5 +12,6 @@ Instructions to install these configuration files:
 - `alias dots='/usr/bin/git --git-dir=$XDG_STATE_HOME/dots --work-tree=$HOME'`
 - `dots config --local status.showUntrackedFiles no`
 - `dots checkout` (possibly backup/remove conflicting files that already exist)
-- OPTIONAL: use `dots sparse-checkout set --no-cone '/*' '!README'` to not have the README live in the root of your home folder.
-use `dots sparse-checkout disable` to put the README back in the working tree
+### OPTIONAL
+- `dots sparse-checkout set --no-cone '/*' '!README.md'` to not have the README live in the root of your home folder.
+- `dots sparse-checkout disable` to restore README.md
