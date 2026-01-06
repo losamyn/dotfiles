@@ -12,8 +12,8 @@ This setup is based on the approach described [here](https://www.atlassian.com/g
 
 Instructions to install these configuration files:
 ```
-git clone --bare "git@github.com:losamyn/dotfiles.git" ~/.local/state/dots
-alias dots='/usr/bin/git --git-dir=~/.local/state/dots --work-tree=$HOME
+git clone --bare git@github.com:losamyn/dotfiles.git ~/.local/state/dots
+alias dots='/usr/bin/git --git-dir=~/.local/state/dots --work-tree=$HOME'
 dots config --local status.showUntrackedFiles no
 dots checkout
 ```
