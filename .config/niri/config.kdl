@@ -69,42 +69,7 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
-// You can configure outputs by their name, which you can find
-// by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
-output "eDP-1" {
-    // Uncomment this line to disable this output.
-    // off
-
-    // Resolution and, optionally, refresh rate of the output.
-    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-    // If the refresh rate is omitted, niri will pick the highest refresh rate
-    // for the resolution.
-    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@60.027"
-
-    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1
-
-    // Transform allows to rotate the output counter-clockwise, valid values are:
-    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-    transform "normal"
-
-    // Position of the output in the global coordinate space.
-    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
-    // The cursor can only move between directly adjacent outputs.
-    // Output scale and rotation has to be taken into account for positioning:
-    // outputs are sized in logical, or scaled, pixels.
-    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
-    // so to put another output directly adjacent to it on the right, set its x to 1920.
-    // If the position is unset or results in an overlap, the output is instead placed
-    // automatically.
-    position x=0 y=0
-}
+include "outputs.kdl"
 
 gestures {
     hot-corners {
@@ -417,11 +382,11 @@ binds {
     Mod+Home         { focus-column-first; }
     Mod+End          { focus-column-last; }
     Mod+G            { focus-column-first; }
-    Mod+semicolon    { focus-column-last; }
+    Mod+Semicolon    { focus-column-last; }
     Mod+Shift+Home         { move-column-to-first; }
     Mod+Shift+End          { move-column-to-last; }
     Mod+Shift+G            { move-column-to-first; }
-    Mod+Shift+semicolon    { move-column-to-last; }
+    Mod+Shift+Semicolon    { move-column-to-last; }
 
     Mod+Ctrl+Left  { focus-monitor-left; }
     Mod+Ctrl+Down  { focus-monitor-down; }
@@ -535,27 +500,27 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+Shift+Comma  { consume-or-expel-window-left; }
-    Mod+Shift+Period { consume-or-expel-window-right; }
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
     // Mod+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
     // Mod+Period { expel-window-from-column; }
 
-    Mod+E { switch-preset-column-width; }
+    Mod+Period { switch-preset-column-width; }
+    Mod+Slash  { switch-preset-window-height; }
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Mod+Shift+E { expand-column-to-available-width; }
-    Mod+D { switch-preset-window-height; }
-    Mod+F { reset-window-height; }
-    Mod+M { maximize-window-to-edges; }
-    Mod+Shift+M { fullscreen-window; }
+    Mod+R { expand-column-to-available-width; }
+    Mod+E { reset-window-height; }
 
-    Mod+R { maximize-column; }
+    Mod+M       { maximize-column; }
+    Mod+F       { maximize-window-to-edges; }
+    Mod+Shift+F { fullscreen-window; }
 
     // Center all fully visible columns on screen.
-    Mod+C { center-visible-columns; }
+    Mod+C       { center-visible-columns; }
     Mod+Shift+C { center-column; }
 
     // Finer width adjustments.
