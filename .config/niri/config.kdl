@@ -508,12 +508,12 @@ binds {
     // Expel the bottom window from the focused column to the right.
     // Mod+Period { expel-window-from-column; }
 
-    Mod+Period { switch-preset-column-width; }
-    Mod+Slash  { switch-preset-window-height; }
+    Mod+Comma { switch-preset-column-width; }
+    Mod+Period  { switch-preset-window-height; }
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Mod+R { expand-column-to-available-width; }
-    Mod+E { reset-window-height; }
+    Mod+Shift+Comma  { expand-column-to-available-width; }
+    Mod+Shift+Period { reset-window-height; }
 
     Mod+M       { maximize-column; }
     Mod+F       { maximize-window-to-edges; }

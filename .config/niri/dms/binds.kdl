@@ -13,7 +13,7 @@ binds {
     Mod+Alt+M hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
-    Mod+Comma hotkey-overlay-title="Settings" {
+    Mod+Slash hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
     Mod+N hotkey-overlay-title="Notification Center" {
