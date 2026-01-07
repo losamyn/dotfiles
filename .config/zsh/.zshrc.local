@@ -2,6 +2,8 @@ EDITOR=nvim
 
 # Alias for managing dotfiles via git
 alias dots='/usr/bin/git --git-dir=$XDG_STATE_HOME/dots --work-tree=$HOME'
+# Alias for lazyvim
+alias lazyvim='NVIM_APPNAME=lazyvim nvim'
 
 # Additional Keybindings
 bindkey '^H' slash-backward-kill-word
