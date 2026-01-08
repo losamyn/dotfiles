@@ -63,6 +63,9 @@ binds {
     XF86AudioMute allow-when-locked=true hotkey-overlay-title="Mute Audio" {
         spawn "dms" "ipc" "call" "audio" "mute";
     }
+    Shift+XF86AudioMute allow-when-locked=true hotkey-overlay-title="Mute Microphone" {
+        spawn "dms" "ipc" "call" "audio" "micmute";
+    }
 
     // Brightness Controls
     XF86MonBrightnessUp allow-when-locked=true hotkey-overlay-title="Brightness Up" {
