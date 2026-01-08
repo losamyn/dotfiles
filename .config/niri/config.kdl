@@ -319,6 +319,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Shift+P hotkey-overlay-title="Open Password Manager" { spawn "keepassxc" "-platform" "xcb"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -575,7 +576,7 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Shift+P { power-off-monitors; }
+    Mod+Alt+P { power-off-monitors; }
 }
 
 recent-windows {
