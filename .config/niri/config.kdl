@@ -518,6 +518,7 @@ binds {
     Mod+M       { maximize-column; }
     Mod+F       { maximize-window-to-edges; }
     Mod+Shift+F { fullscreen-window; }
+    Mod+Alt+F   { toggle-windowed-fullscreen; }
 
     // Center all fully visible columns on screen.
     Mod+C       { center-visible-columns; }
