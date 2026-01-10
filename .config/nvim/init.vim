@@ -241,6 +241,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap Ctrl+Backspace to delete full words
+imap <C-BS> <C-W>
+cmap <C-BS> <C-W>
+
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
