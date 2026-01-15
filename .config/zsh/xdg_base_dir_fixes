@@ -1,0 +1,9 @@
+# Fixes for XDG Base Directories, see:
+# https://wiki.archlinux.org/title/XDG_Base_Directory
+
+# npm
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+# Python
+export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
+export PYTHONPYCACHEPREFIX=$XDG_CACHE_HOME/python
+export PYTHONUSERBASE=$XDG_DATA_HOME/python
