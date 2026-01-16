@@ -1,41 +1,41 @@
 binds {
     // Toggle Bar
-    Mod+B hotkey-overlay-title="Toggle Bar" {
+    Mod+B repeat=false hotkey-overlay-title="Toggle Bar" {
         spawn "dms" "ipc" "call" "bar" "toggle" "name" "Main Bar"
     }
     // Application Launchers
-    Mod+Space hotkey-overlay-title="Application Launcher" {
+    Mod+Space repeat=false hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
-    Mod+V hotkey-overlay-title="Clipboard Manager" {
+    Mod+V repeat=false hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
-    Mod+Alt+M hotkey-overlay-title="Task Manager" {
+    Mod+Alt+M repeat=false hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
-    Mod+Slash hotkey-overlay-title="Settings" {
+    Mod+Slash repeat=false hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
-    Mod+N hotkey-overlay-title="Notification Center" {
+    Mod+N repeat=false hotkey-overlay-title="Notification Center" {
         spawn "dms" "ipc" "call" "notifications" "toggle";
     }
-    Mod+P hotkey-overlay-title="Notepad" {
+    Mod+P repeat=false hotkey-overlay-title="Notepad" {
         spawn "dms" "ipc" "call" "notepad" "toggle";
     }
-    /-Mod+Y hotkey-overlay-title="Browse Wallpapers" {
+    /-Mod+Y repeat=false hotkey-overlay-title="Browse Wallpapers" {
         spawn "dms" "ipc" "call" "dankdash" "wallpaper";
     }
-    Mod+Shift+Alt+Slash hotkey-overlay-title="Show all keybindings" {
+    Mod+Shift+Alt+Slash repeat=false hotkey-overlay-title="Show all keybindings" {
         spawn "dms" "ipc" "call" "keybinds" "toggle" "niri";
     }
 
     // Security
-    Mod+Alt+L hotkey-overlay-title="Lock Screen" {
+    Mod+Alt+L repeat=false hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
 
     // Power Menu
-    Mod+Alt+Q hotkey-overlay-title="Toggle Power Menu" {
+    Mod+Alt+Q repeat=false hotkey-overlay-title="Toggle Power Menu" {
         spawn "dms" "ipc" "call" "powermenu" "toggle"
     }
 
@@ -76,13 +76,13 @@ binds {
     }
 
     // Screenshot controls
-    Print hotkey-overlay-title="Screenshot Area" {
+    Print repeat=false hotkey-overlay-title="Screenshot Area" {
         spawn "dms" "ipc" "call" "niri" "screenshot"
     }
-    Ctrl+Print hotkey-overlay-title="Screenshot Screen" {
+    Ctrl+Print repeat=false hotkey-overlay-title="Screenshot Screen" {
         spawn "dms" "ipc" "call" "niri" "screenshotScreen"
     }
-    Alt+Print hotkey-overlay-title="Screenshot Focused Window" {
+    Alt+Print repeat=false hotkey-overlay-title="Screenshot Focused Window" {
         spawn "dms" "ipc" "call" "niri" "screenshotWindow"
     }
 
