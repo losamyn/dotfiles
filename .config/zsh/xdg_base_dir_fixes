@@ -1,3 +1,4 @@
+# Sourced in ~/.zshenv
 # Fixes for XDG Base Directories, see:
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 
@@ -7,3 +8,12 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
 export PYTHONPYCACHEPREFIX=$XDG_CACHE_HOME/python
 export PYTHONUSERBASE=$XDG_DATA_HOME/python
+# zsh
+[ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
+HISTFILE="$XDG_STATE_HOME"/zsh/history
+DIRSTACKFILE="$XDG_STATE_HOME"/zsh/zdirs
+
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+COMPDUMPFILE="$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
+
