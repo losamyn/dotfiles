@@ -257,6 +257,10 @@ layout {
 // Clipboard history
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 
+clipboard {
+    disable-primary
+}
+
 hotkey-overlay {
     skip-at-startup
     hide-not-bound
