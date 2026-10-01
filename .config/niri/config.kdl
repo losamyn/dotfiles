@@ -297,6 +297,9 @@ window-rule {
     // Rounded corners, except top left
     geometry-corner-radius 0 8 8 8
     clip-to-geometry true
+    background-effect {
+        blur true
+    }
 }
 window-rule {
     // Fade non active windows
